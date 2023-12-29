@@ -1,14 +1,14 @@
 :root {
     /* header/footer specific variables */
     --header-lr-margin: 60px;
-    --primary-font: rgb(3, 22, 48);
     --primary-background: rgb(125, 126, 128);
-    --accent-font: rgb(65, 66, 70);
-    --accent-background: rgb(123, 134, 145);
+    --accent-font: rgb(198, 203, 226);
+   
 
     /* main page specific variables */
-    --page-background: rgb(146, 159, 177);
-    --page-font: rgb(6, 31, 70);
+    --page-background: rgb(139, 144, 150);
+    --page-font: rgb(7, 30, 80);
+    --card-background:  rgb(117, 129, 141);
 
 }
 
@@ -31,8 +31,8 @@ header {
     flex-wrap: wrap;
     flex: 1 1 0;
     justify-content: space-between;
-    background-image: linear-gradient(rgb(25, 25, 29) 00%,
-            rgb(110, 110, 110) 100%);
+    background-image: linear-gradient(rgb(27, 27, 39) 00%,
+            rgb(131, 130, 130) 100%);
 }
 
 .head {
@@ -45,13 +45,13 @@ header {
     padding: 10px 38px 10px 0px;
     padding-left: var(--header-lr-margin);
     margin: 10px 10px 10px 0px;
-    background-color: var(--accent-background);
+    background-color: var(--page-background);
     align-self: end;
 }
 
 .head2 {
     width: 250px;
-    border: 5px solid var(--accent-background);
+    border: 5px solid var(--page-background);
     border-radius: 20px;
     margin: 10px;
 }
@@ -74,7 +74,7 @@ header {
 }
 
 a {
-    color: var(--primary-font);
+    color: var(--page-font);
 }
 
 /* Header end */
@@ -196,7 +196,6 @@ a {
 
 .card {
     border-radius: 5px;
-
     display: flex;
     flex: wrap;
     height: 20%;
@@ -204,7 +203,7 @@ a {
     padding: 8px;
     z-index: 1;
     align-items: center;
-    background-color: var(--page-background);
+    background-color: var(--card-background);
 
 }
 
@@ -315,7 +314,7 @@ span {
 /* Footer Elements */
 footer {
     background-color: var(--primary-background);
-    color: var(--primary-font);
+    color: var(--page-font);
     text-align: center;
     padding: 10px;
 }
