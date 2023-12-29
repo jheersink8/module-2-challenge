@@ -172,7 +172,7 @@ a {
 /* "My Work" grid */
 .work-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
         'project1 project1'
@@ -182,29 +182,30 @@ a {
     align-items: center;
 }
 
-.card1{
+.card1 {
     grid-area: project1;
 }
 
-.card2{
+.card2 {
     grid-area: project2;
 }
 
-.card3{
+.card3 {
     grid-area: project3;
 }
 
-.card{
+.card {
     border-radius: 5px;
+
     display: flex;
     flex: wrap;
     height: 20%;
     width: fit-content;
-    padding:8px;
+    padding: 8px;
     z-index: 1;
     align-items: center;
     background-color: var(--page-background);
-    
+
 }
 
 .project1 {
@@ -242,38 +243,64 @@ a {
     filter: blur(1.8px) opacity(90%);
 }
 
-h3,span{
+h3,
+span {
     color: var(--page-font);
 }
 
-h3{
+h3 {
     font-size: x-large;
 }
 
-span{
+span {
     font-size: medium;
 }
 
-/* Transitions/Animations */
-.list:hover{
-    filter: blur(0.1px) opacity(100%);
-    box-shadow: 4px 0px rgb(4, 18, 58), -4px 0px rgb(4, 18, 58);
-    transition: all 0.25s ease-in-out;  
+.link {
+    position: relative;
+    left: 50px;
+    opacity: 0;
+    
 }
 
-.card:hover + .project{
+.git {
+    position: relative;
+    left: 100px;
+    opacity: 0;
+}
+
+/* Transitions/Animations */
+.list:hover {
+    filter: blur(0.1px) opacity(100%);
+    box-shadow: 4px 0px rgb(4, 18, 58), -4px 0px rgb(4, 18, 58);
+    transition: all 0.25s ease-in-out;
+}
+
+.card:hover {
+    border-radius: 9px;
+    border: 1px solid var(--page-font);
+    padding-right: 150px;
+    transition: all 1s linear;
+}
+
+.card:hover+.project {
     border-radius: 5px;
     filter: blur(0.1px) opacity(100%);
     background-position-y: -6px;
     box-shadow: inset 0px 0px 8px rgb(4, 18, 58), 0 0 15px rgb(4, 8, 68);
-    transition: all 0.5s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
-.card:hover{
-    border-radius: 5px;
-    border: 1px solid var(--page-font);
-    width: fit-content;
-    transition: all 0.5s ease-in-out;
+.card:hover .link {
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: .5s;
+}
+
+.card:hover .git {
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: .75s;
 }
 
 .contact:hover {
@@ -281,6 +308,7 @@ span{
     box-shadow: inset 0px 0px 8px rgb(4, 18, 58), 0 0 15px rgb(4, 8, 68);
     transition: all 0.15s ease-in-out;
 }
+
 /* Main end */
 /* ------------------------------------------------------------------------ */
 
