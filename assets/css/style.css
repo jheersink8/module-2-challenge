@@ -319,3 +319,106 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Responsive Layout Media Query*/
+
+/* Tablet <992px */
+/* Changed "My Work" to one column instead of two. Disabled hover animations that wouldn't be intuitive on tablet/mobile.*/
+@media screen and (max-width:992px){
+    .work-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            'project1'
+            'project2'
+            'project3'
+            'project4' 
+            'project5';
+        gap: 30px;
+        align-items: center;
+    }
+
+    .link {
+        position: relative;
+        left: 50px;
+        opacity: 1;
+        
+    }
+    
+    .git {
+        position: relative;
+        left: 100px;
+        opacity: 1;
+    }
+    .list {
+        filter: blur(0.1px) opacity(100%);
+        box-shadow: 4px 0px rgb(4, 18, 58), -4px 0px rgb(4, 18, 58);
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .card {
+        border-radius: 9px;
+        border: 1px solid var(--page-font);
+        padding-right: 150px;
+        transition: all 1s linear;
+    }
+    
+    .project {
+        border-radius: 5px;
+        filter: blur(0.1px) opacity(100%);
+        background-position-y: -6px;
+        box-shadow: inset 0px 0px 8px rgb(4, 18, 58), 0 0 15px rgb(4, 8, 68);
+        transition: all 2s ease-in-out;
+    }
+    
+    .link {
+        opacity: 1;
+        transition: all 1s ease;
+        transition-delay: .5s;
+    }
+    
+    .git {
+        opacity: 1;
+        transition: all 1s ease;
+        transition-delay: .75s;
+    }
+    
+    .contact{
+        filter: blur(0.1px) opacity(100%);
+        box-shadow: inset 0px 0px 8px rgb(4, 18, 58), 0 0 15px rgb(4, 8, 68);
+        transition: all 0.15s ease-in-out;
+    }
+
+}
+
+/* Mobile <768px */
+/* Changed entire page to a single column */
+@media screen and (max-width:768px){
+    .main-grid {
+        background-color: var(--page-background);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            'aside1' 
+            'article1'
+            'aside2' 
+            'article2'
+            'aside3' 
+            'article3';
+        gap: 40px;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .aside {
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--page-font);
+        padding: 0px 55px 0px 0px;
+        background-color: var(--page-background);
+   
+    }
+}
