@@ -2,6 +2,8 @@
 
 ## Description
 
+Website URL (https://jheersink8.github.io/module-2-challenge/)
+
 This website is designed to showcase some of my (Jordan Heersink's) projects while I'm progressing through DU's full-stack bootcamp. This website was initially built in December of 2023 and it will be added to as more content becomes available. 
 
 - **What was your motivation?** At the time of writing this readme, I have a little more than two weeks of experience using HTML/CSS tools. As I practice and get more comfortable using them, I'm finding myself in a situation where I want to showcase what I can do. This website is designed to be a centralized collection of my projects. 
